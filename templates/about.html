@@ -1,0 +1,140 @@
+
+{% extends "base.html" %}
+{% block start%}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.about-us{
+  min-height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #ddd;
+}
+
+.img-section{
+    float: right;
+    width: 40%;
+    margin: auto;
+    
+    
+}
+.img-section img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.about{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  margin: auto;
+}
+.text{
+    float: left;
+    width: 55%;
+}
+.text h2{
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+}
+.text h5{
+  font-size: 3vh;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+.hire{
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover{
+  background: #8151e1;
+  border: 1px solid #4070f4;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+    
+    .about{
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        margin: auto;
+      }
+      .text{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+    .img-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin-top: -30px;
+    }
+    .text h2{
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+      
+      }
+      .data{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .text h5{
+        text-align: center;
+      }
+}
+    
+ 
+</style>
+
+
+
+<section class="about-us">
+    <div class="about">
+        <div class="img-section">
+            <img src="{% static 'images/About_image.jpeg' %}" alt="Vikas Kumar">
+          </div>
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Back-end Developer</h5>
+          <p>I(Vikas Kumar) am Software Engineering and want to start my career with a reputed company. I am a Back-end Developer and developes Back-end using Django and Django Rest Api Framework. I am a fresher of 2023 batch B.Tech Computer Science and Engineering of Inderprastha Engineering College, Ghaziabad with a Semester Average of 74%, 7.7 CGPA. I have knowledge of SQL, DBMS, MVT architecture, Excellent Problem Solving and Coding skills</p>
+          
+        <div class="data">
+        <a href="#" class="hire">Hire Me</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+{% endblock %}

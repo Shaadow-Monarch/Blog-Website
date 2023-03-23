@@ -1,6 +1,7 @@
 
 {% extends "base.html" %}
 {% block start%}
+{%load static%}
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
 *{
@@ -121,15 +122,15 @@
 <section class="about-us">
     <div class="about">
         <div class="img-section">
-            <img src="{% static 'images/About_image.jpeg' %}" alt="Vikas Kumar">
+            <img src="{%static "/img/karan.jpeg"%}" alt="karan bisht">
           </div>
       <div class="text">
         <h2>About Us</h2>
         <h5>Back-end Developer</h5>
-          <p>I(Vikas Kumar) am Software Engineering and want to start my career with a reputed company. I am a Back-end Developer and developes Back-end using Django and Django Rest Api Framework. I am a fresher of 2023 batch B.Tech Computer Science and Engineering of Inderprastha Engineering College, Ghaziabad with a Semester Average of 74%, 7.7 CGPA. I have knowledge of SQL, DBMS, MVT architecture, Excellent Problem Solving and Coding skills</p>
+          <p>I(karan bisht) am Software Engineering and want to start my career with a reputed company. I am a Back-end Developer and developes Back-end using Django and Django Rest Api Framework. I am a fresher of 2023 batch B.Tech Computer Science and Engineering of IMS Engineering College, Ghaziabad with a Semester Average of 78%, 8.2 CGPA. I have knowledge of python, SQL, DBMS, MVT architecture, Excellent Problem Solving and Coding skills</p>
           
         <div class="data">
-        <a href="#" class="hire">Hire Me</a>
+        <a href="mailto:karanbisht556@gmail.com" class="hire">Hire Me</a>
         </div>
       </div>
       

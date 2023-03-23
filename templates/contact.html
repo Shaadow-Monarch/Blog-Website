@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block start%}
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.about-us{
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #ddd;
+}
+.pic{
+  height: auto;
+  width:  302px;
+}
+.about{
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text{
+  width: 540px;
+}
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+
+}
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+
+@media (max-width:768px){
+    .text h2{
+        font-size: 40px;
+    }
+    .text h5{
+        font-size: 19px;
+    }
+    .text p{
+        font-size: 14px;
+    }
+}
+ 
+</style>
+
+
+
+<section class="about-us">
+    <div class="about">
+      <!--<img src="girl.png" class="pic">-->
+      <div class="text">
+        <h2>Contact Us</h2>
+        <h5>Mail me at <a href="mailto:karanbisht556@gmail.com"><span>karanbisht556@gmail.com</span></a></h5>
+          <p>For any query, Bug or hiring related issue of suggestion mail us at the above mail.
+            We will definitely resolve your query. Thank You, Have a Nice Day
+          </p>
+      </div>
+    </div>
+  </section>
+
+{%endblock%}

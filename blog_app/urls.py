@@ -12,5 +12,7 @@ urlpatterns = [
     path("delete/<id>",views.delete_blog_view,name='delete'),
     path("my_blogs",views.my_blog_view,name="my_blogs"),
     path("verify/<token>",views.verify_view,name='verify'),
+    path("about/",views.about_view,name='about'),
+    path("contact/",views.contact_view,name='contact'),
 ]
 

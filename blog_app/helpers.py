@@ -23,7 +23,7 @@ from django.core.mail import send_mail
 
 def send_mail_to_user(token,email):
     subjects = "Your  account needs to be verified"
-    message =  "hi paste this link to url to verify acount localhost:8000/verify/{}".format(token)
+    message =  "hi paste this link to url to verify acount https://shadowmonarch.pythonanywhere.com/verify/{}".format(token)
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email,]
      

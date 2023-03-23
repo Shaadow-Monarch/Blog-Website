@@ -132,3 +132,10 @@ def verify_view(request,token):
 
 def error_404_view(request,exception):
     return render(request,'404.html')
+
+
+def about_view(request):
+    return render(request,'about.html')
+
+def contact_view(request):
+    return render(request,'contact.html')

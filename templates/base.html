@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Directory Theme by Bootstrapious</title>
+    <title>karan ke vlogs</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -26,9 +26,7 @@
     <link rel="stylesheet" href="static/css/magnific-popup.css">
     <!-- theme stylesheet-->
     <link rel="stylesheet" href="static/css/default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <!-- {% comment %} <link rel="stylesheet" href="static/css/custom.css"> {% endcomment %}
-    {% comment %} adding js file {% endcomment %} -->
+    
     
 
    </head>
@@ -52,19 +50,17 @@
               <a class="nav-link" href="#"><h5>Home</h5><span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"><h5>About</h5></a>
+              <a class="nav-link" href="{% url "about" %}"><h5>About</h5></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#"><h5>Contact</h5></a>
-            </li>
+              <a class="nav-link" href="{% url "contact" %}"><h5>Contact</h5></a>
+            </li> 
           </ul>
 
 
           <ul class="navbar-nav ml-auto">
             {% if request.user.is_authenticated %}
-            {% comment %} <li class="nav-item active">
-              <a class="nav-link mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block" href="#">Home <span class="sr-only">Home</span></a>
-            </li> {% endcomment %}
+        
             <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block">
               <a class="btn btn-primary" href="{% url 'add_blog' %}">Add Blog</a></li>
             </li>

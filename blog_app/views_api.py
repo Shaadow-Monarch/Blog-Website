@@ -32,9 +32,9 @@ class Login_api_view(APIView):
                 raise Exception('invalid username not found')
             
             print(check_user)
-            # if not Profile_model.objects.filter(user=check_user).first().is_varified:
-            #     response['message'] = 'your profile is not verified'
-            #     raise Exception('profile not verified')
+            if not Profile_model.objects.filter(user=check_user).first().is_varified:
+                response['message'] = 'your profile is not verified'
+                raise Exception('profile not verified')
 
             # before loginn is_varified hass to be true
             user_obj = authenticate(username=data.get('username'),

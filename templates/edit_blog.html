@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block start%}
+
+<div class="container" >
+
+    <form method = "POST" class="mt-5 pt-5 mb-5 pb-5" enctype="multipart/form-data">
+        {% csrf_token %} 
+
+        <div class="col-md-12">
+            <label> Enter Block Title</label>
+            <input type="text" class = "form-control" name="title" value="{{user_obj.title}}">
+        </div>
+
+        <div class="col-md-12">
+            <label> Enter Author Name </label>
+            <input type="text" class = "form-control" name="author" value="{{user_obj.author}}">
+        </div>
+
+        <!-- this two below lines dealing with flora editor  -->
+        <div class="col-md-12">
+            {{form.media}}
+            {{form.as_p}}   
+        </div>
+        <div class="col-md-12">
+          {% comment %} <img class="img-fluid mb-5" src="/media/{{user_obj.post}}" alt=""/> {% endcomment %}
+          <input type="file" name="image" class="form-control">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary mt-4">Update blog </button>
+        </div>
+    </form> 
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block start%}
+
+<section class="position-relative py-6" style="min-height: 100vh;">
+<div class="container">
+
+  <div class="row border border-dark bg-success"> 
+    <div class="col-3 border ">#</div>
+    <div class="col-3 border ">Title</div>
+    <div class="col-3 border ">Created</div>
+    <div class="col-3 border">Actions</div>
+  </div>
+  {% for obj in user_obj%}
+  <div class="row border border-dark bg-info"> 
+    <div class="col-3 border border-dark">{{forloop.counter}}</div>
+    <div class="col-3 border border-dark">{{obj.title}}</div>
+    <div class="col-3 border border-dark">{{obj.created_on}}</div>
+    <div class="col-3 border border-dark"><a href="{% url "edit" obj.slug %}" class="btn btn-success">Edit</a>
+                                          <a href="{% url "delete" obj.id %}" class="btn btn-warning">Delete</a></div>
+  </div>
+  {%endfor%}
+
+
+
+{% comment %} <table class="table" style="width: 10%;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Created On</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for obj in user_obj%}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{obj.title}}</td>
+        <td>{{obj.created_on}}</td>
+        <td>
+            <a href="{% url "edit" obj.slug %}" class="btn btn-success">Edit</a>
+            <a href="{% url "delete" obj.id %}" class="btn btn-warning">Delete</a>
+        </td>
+      </tr>
+      {%endfor%}
+    </table> {% endcomment %}
+</div>
+</section>
+
+
+{% endblock%}
